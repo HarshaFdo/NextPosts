@@ -1,3 +1,5 @@
+import { redirect } from 'next/navigation';
+
 import { storePost } from '@/lib/posts';
 
 export default function NewPostPage() {
@@ -7,12 +9,14 @@ export default function NewPostPage() {
     const image = formData.get('image');
     const content = formData.get('content');
 
-    storePost({
+    await storePost({
       imageUrl: '',
       title,
       content,
       userId: 1
     })
+
+    redirect('/feed');
   }
 
   return (
