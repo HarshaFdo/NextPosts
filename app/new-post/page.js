@@ -10,6 +10,18 @@ export default function NewPostPage() {
     const image = formData.get('image');
     const content = formData.get('content');
 
+    if (!title || title.trim().length === 0) {
+
+    }
+
+    if (!content || title.trim().length === 0) {
+
+    }
+
+    if (!image) {
+      
+    }
+
     await storePost({
       imageUrl: '',
       title,

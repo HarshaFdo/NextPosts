@@ -1,9 +1,9 @@
 'use client';
 
-import { useFormState } from "react-dom";
+import { useActionState } from "react";
 
 export default function FormSubmit() {
-  const status = useFormState();
+  const status = useActionState();
 
   if (status.pending) {
     return <p>Creating Post...</p>
