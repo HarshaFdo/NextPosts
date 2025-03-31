@@ -5,7 +5,7 @@ import { getPosts } from '@/lib/posts';
 
 async function LatestPosts() {
   const latestPosts = await getPosts(2);
-  return <Posts posts={latestPosts} />;
+  return <Posts posts={ latestPosts } />;
 }
 
 export default async function Home() {
